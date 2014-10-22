@@ -15,18 +15,18 @@
 <h:head>
 	<title>Cadastro</title>
 </h:head>
-	<h:body>
 
 		<h:form>
-			<h:outputLabel for="nome" value="Nome:" />
-			<h:inputText id="nome" value="#{Usuario.nome}" />
+		
+			 <h3>Cadastro </h3><br/>
+			<h:outputLabel for="nome" value="Nome:" /> 
+			<h:inputText id="nome" value="#{UsuarioController.usuario.nome}" /> 
 			<h:outputLabel for="email" value="Email:" />
-			<h:inputText id="email" value="#{Usuario.email}" />
+			<h:inputText id="email" value="#{UsuarioController.usuario.email}" /> 
 			<h:outputLabel for="senha" value="Senha:" />
-			<h:inputText id="senha" value="#{Usuario.senha}" />
+			<h:inputText id="senha" value="#{UsuarioController.usuario.senha}" /> 
 			<h:commandButton value="Cadastre-se" action="#{UsuarioController.cadastrar}" />
 		</h:form>
 	
-	</h:body>	
 </ui:composition>	
 </html>

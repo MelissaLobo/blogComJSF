@@ -24,4 +24,9 @@ public class PostagemController {
 		funcao.novaPostagem(usuario);
 		return "listaDePostagens";
 	}
+	
+	public String cancelar(Usuario usuario) {
+		usuario = null;
+		return "index";
+	}
 }
