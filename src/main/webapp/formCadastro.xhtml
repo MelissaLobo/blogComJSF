@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<ui:composition template="/estrutura.xhtml">	
+	<ui:param name="titulo" value="Cadastro" />
+	<ui:define name="direita">
+		<h:messages infoClass="info" errorClass="erro" warnClass="warn"
+			fatalClass="fatal" />
+	</ui:define>
+
+<h:head>
+	<title>Cadastro</title>
+</h:head>
+	<h:body>
+
+		<h:form>
+			<h:outputLabel for="nome" value="Nome:" />
+			<h:inputText id="nome" value="#{Usuario.nome}" />
+			<h:outputLabel for="email" value="Email:" />
+			<h:inputText id="email" value="#{Usuario.email}" />
+			<h:outputLabel for="senha" value="Senha:" />
+			<h:inputText id="senha" value="#{Usuario.senha}" />
+			<h:commandButton value="Cadastre-se" action="#{UsuarioController.cadastrar}" />
+		</h:form>
+	
+	</h:body>	
+</ui:composition>	
+</html>

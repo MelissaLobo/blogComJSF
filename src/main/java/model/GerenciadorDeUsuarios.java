@@ -6,21 +6,21 @@ import persistence.UsuarioDAO;
 
 public class GerenciadorDeUsuarios {
 	
-	UsuarioDAO usuarioDAO = new UsuarioDAO();
-
-	public void cadastrarUsuario(String name, String email, String senha) {
-
-		Usuario usuario = new Usuario(name, email, senha);
+	private UsuarioDAO dao;
 		
-		usuarioDAO.create(usuario);
+	public void cadastrarUsuario(Usuario usuario) {
+		dao.create(usuario);
+	}
+
+	public Usuario logar(Usuario usuario) {
+		dao.buscaPorLoginESenha(usuario);
+		return usuario;
 	}
 
 	public List<Usuario> listaDeUsuarios() {
-		return usuarioDAO.findAll();
-	}
-	
-	public Usuario tentaLogar(String email, String senha) {
-		return usuarioDAO.buscaPorLoginESenha(email, senha);
+
+		List<Usuario> usuarios = dao.findAll();
+		return usuarios;
 	}
 	
 }

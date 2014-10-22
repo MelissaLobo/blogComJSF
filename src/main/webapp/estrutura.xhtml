@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+		<title>#{titulo}</title>
+		<style>
+@IMPORT url("estilo.css");
+</style>
+	</h:head>
+
+	<h:body>
+		<div id="topo">
+			<h:graphicImage name="Logo02.jpg" library="imagens" />
+		</div>
+		<div id="conteudo">
+			<div id="esquerda">
+				<ui:include src="/menu.xhtml" />
+			</div>
+			<div id="direita">
+				<ui:insert name="direita">O que vem do lado direito</ui:insert>
+			</div>
+			<div id="centro">
+				<ui:insert>O que vem no centro</ui:insert>
+			</div>
+		</div>
+		<div id="rodape">
+			<strong>Lobo Marinho Projetos</strong><br /> +55 11 99344.2890
+		</div>
+
+		<ui:debug />
+	</h:body>
+
+</html>

@@ -1,0 +1,148 @@
+@CHARSET "UTF-8";
+body, div {
+	margin: 0;
+	padding: 0;
+	font: normal 12px Arial; 
+}
+
+body {
+	background-image: url(.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+#logo {
+	margin: 10px;
+}
+
+#topo {
+	height: 80px;
+	background-color: #EEE;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#AAA) );
+    background-image: -moz-linear-gradient(  top, #444, #AAA );
+    border-bottom: 1px solid #777;
+}
+
+#topo > img {
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	float: left;
+}
+#topo > form {
+	padding-top: 50px;
+	padding-right: 10px;
+	float: right;
+}
+#esquerda {
+	margin-left: 10px;
+	float:left;
+	width: 205px;
+	background-color: #EDD;
+	padding: 5px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	-moz-box-shadow: 3px 3px 1px #999;
+	-webkit-box-shadow: 3px 3px 1px #999;
+}
+
+#esquerda > ul {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	list-style: none;
+}
+
+#esquerda > ul > li {
+	height: 20px;
+	padding: 5px;
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+}
+
+#esquerda > ul > li:nth-child(even) {
+	background-color: #FEE;
+}
+
+#esquerda > ul > li:hover {
+	background-color: #E0D0D0;
+}
+
+#esquerda > ul > li > a {
+	text-decoration: none;
+	color: #000;
+	text-shadow: 1px 1px 1px #DDD;
+}
+
+#esquerda > ul > li > a:hover {
+	color: #555;
+}
+
+#centro {
+	margin-left: 240px;
+}
+
+#direita {
+	float: right;
+	background-color: #DDE;
+	padding: 10px;
+}
+
+#rodape {
+	background-color: #333;
+	color: #FFF;
+	height: 30px;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#999), to(#333) );
+    background-image: -moz-linear-gradient(  top, #999, #333 );
+    border-top: 1px solid #777;
+    text-shadow: 1px 1px 1px #000;
+}
+
+#conteudo > div {
+	margin-bottom: 50px;
+}
+
+#escolhaIdiomas > table, #formTabela > table, #formDados > table, #formTipo > table {
+	width: 50%;
+	border: 1px dotted #000;
+	margin: 5px;
+}
+
+tr > th {
+	background-color: #DDD;
+}
+
+tr.linha1 > td {
+	background-color: #EEE;
+}
+
+tr.linha2 > td {
+	background-color: #FFF;
+}
+
+.info {
+	color: #00F;
+}
+.warn {
+	color: #b0b000;
+}
+.erro {
+	color: #F00;
+}
+.fatal {
+	color: #F00;
+	font-weight: bold;
+}
+
+#primefaces {
+	position:absolute;
+	width: 70%;
+}
+
+#richfaces {
+	width: 70%;
+}

@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class JpaUseful {
 
-	private static final String PERSISTENCE_UNIT = "blogJPA";
+	private static final String PERSISTENCE_UNIT = "blogComJSF";
 	private static EntityManagerFactory entityManagerFactory;
 
 	private JpaUseful() {

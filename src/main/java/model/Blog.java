@@ -1,6 +1,5 @@
 package model;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import persistence.ComentarioDAO;
@@ -42,6 +41,11 @@ public class Blog {
 		usuarioDAO.update(usuarioGerenciado);
 
 	}
+	
+	public void novaPostagem(Usuario usuario) {
+		usuarioDAO.create(usuario);
+	}
+	
 
 	public List<Postagem> listaPostsPorUsuario(Usuario usuario) {
 		return postagemDAO.listaPostsPorUsuario(usuario);

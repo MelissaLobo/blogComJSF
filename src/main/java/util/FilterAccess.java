@@ -4,7 +4,6 @@ import static util.Ferramentas.directsHtlm;
 
 import java.io.IOException;
 
-import javax.persistence.EntityManager;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -12,13 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import model.Usuario;
 
-//@WebFilter(urlPatterns = "/*")
+@WebFilter(urlPatterns = "/*")
 public class FilterAccess implements Filter{
 
 	@Override
@@ -54,5 +52,4 @@ public class FilterAccess implements Filter{
 	
 		
 	}
-
 }

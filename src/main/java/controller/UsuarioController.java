@@ -1,28 +1,33 @@
 package controller;
 
-import java.util.List;
-
+import javax.faces.bean.ManagedBean;
 import javax.servlet.http.HttpSession;
 
-import model.Blog;
+import model.GerenciadorDeUsuarios;
 import model.Usuario;
 
+@ManagedBean
 public class UsuarioController {
 	
-		
+	private GerenciadorDeUsuarios funcao;
+	
+	public UsuarioController(GerenciadorDeUsuarios funcao) {
+		this.funcao = funcao;
+	}
+	
 	public String formularioDeCadastro() {
-		return "formCadastro";
+		return "/formCadastro.xhtml";
 	}
 
 	
 	public String cadastrar(Usuario usuario) {
 		funcao.cadastrarUsuario(usuario);
-		return "loginForm";
+		return "/formLogin.xhtml";
 	}
 
 	
 	public String formularioDeLogin() {
-		return "loginForm";
+		return "/formLogin.xhtml";
 	}
 
 	
@@ -32,16 +37,16 @@ public class UsuarioController {
 			session.setAttribute("usuarioLogado", usuario);
 			return "home";
 		} else {
-			return "redirect:loginForm";
+			return "redirect:formLogin";
 		}
 	}
 
 	
-	public String listaDeUsuarios() {
-
-		List<Usuario> usuarios = funcao.listaDeUsuarios();
-		usuarios.add("todosOsUsuarios", usuarios);
-		return usuarios;
-	}
+//	public String listaDeUsuarios() {
+//
+//		List<Usuario> usuarios = funcao.listaDeUsuarios();
+//		usuarios.add("todosOsUsuarios", usuarios);
+//		return usuarios;
+//	}
 
 }
