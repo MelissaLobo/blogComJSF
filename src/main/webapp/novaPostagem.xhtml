@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.prime.com.tr/ui"> 
+      xmlns:h="http://java.sun.com/jsf/html"> 
 <ui:composition template="/estrutura.xhtml">	
 	<ui:param name="titulo" value="Nova Postagem" />
 	<ui:define name="direita">
@@ -11,25 +10,27 @@
 			fatalClass="fatal" />
 	</ui:define>
 	
+	  <div class="large-12 columns">
+        <ui:define name="content">
+            <div class="small-8">
+                <h3>Nova Postagem</h3>
 	 <h:form prependId="false">
-		<p:tabView id="primefaces">
-			<p:tab title="Primeiros exemplos">
-				<h:panelGrid columns="2">
-					<h:outputLabel for="nome" value="Nome: "/>
-					<p:keyboard id="nome"/>
-					
-					<h:outputLabel for="senha" value="Senha: "/>
-					<p:password id="senha" promptLabel="Digite a senha" 
-							weakLabel="Senha fraca"
-							strongLabel="Senha forte"
-							goodLabel="Senha razoável"
-							minLength="6" />
-							</h:panelGrid>
-					<p:button value="Salvar"/>
-				</p:tab>
-			</p:tabView>
-			<p:resizable for="primefaces"/>
-		<p:draggable for="primefaces" opacity="0.6"/>
-	</h:form>
+                    <div class="row">
+                        <div class="small-3 columns">
+                            <label for="titulo" class="right inline">Titulo</label>
+                        </div>
+                        <div class="small-9 columns">
+                            <h:inputText id="titulo" value="#{postagemController.titulo}"/>
+                            <p>
+                                <h:commandButton value="postar" type="submit"
+                                                 action="#{postagemController.postar}"
+                                                 styleClass="button radius"/>
+                            </p>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+  </ui:define>
+ </div>
 </ui:composition>
 </html>

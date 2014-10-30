@@ -20,12 +20,12 @@
 		
 			 <h3>Cadastro </h3><br/>
 			<h:outputLabel for="nome" value="Nome:" /> 
-			<h:inputText id="nome" value="#{UsuarioController.usuario.nome}" /> 
+			<h:inputText id="nome" value="#{usuarioController.nome}" /> 
 			<h:outputLabel for="email" value="Email:" />
-			<h:inputText id="email" value="#{UsuarioController.usuario.email}" /> 
+			<h:inputText id="email" value="#{usuarioController.email}" /> 
 			<h:outputLabel for="senha" value="Senha:" />
-			<h:inputText id="senha" value="#{UsuarioController.usuario.senha}" /> 
-			<h:commandButton value="Cadastre-se" action="#{UsuarioController.cadastrar}" />
+			<h:inputText id="senha" value="#{usuarioController.senha}" /> 
+			<h:commandButton value="Cadastre-se" action="#{usuarioController.cadastrar}" />
 		</h:form>
 	
 </ui:composition>	

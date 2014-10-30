@@ -8,11 +8,14 @@ import javax.servlet.http.HttpSession;
 import model.GerenciadorDeUsuarios;
 import model.Usuario;
 
-@ManagedBean
+@ManagedBean(name="usuarioController")
 public class UsuarioController {
 
 	private Usuario usuario;
 	private GerenciadorDeUsuarios funcao;
+	private String name;
+	private String email;
+	private String senha;
 
 	public UsuarioController(GerenciadorDeUsuarios funcao) {
 		this.funcao = funcao;
@@ -51,5 +54,39 @@ public class UsuarioController {
 		this.usuario = usuario;
 	}
 
+	public GerenciadorDeUsuarios getFuncao() {
+		return funcao;
+	}
+
+	public void setFuncao(GerenciadorDeUsuarios funcao) {
+		this.funcao = funcao;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
+	}
+
+	
+	
 	
 }

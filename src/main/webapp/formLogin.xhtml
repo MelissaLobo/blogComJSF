@@ -18,12 +18,12 @@
         <h3>Login </h3>
         <h:form id="login-form">
            <h:outputText value="Nome:"/>
-           <h:inputText value="#{usuario.nome}" id="nome"/>
+           <h:inputText value="#{usuarioController.nome}" id="nome"/>
            <br/>
            <h:outputText value="Senha:"/>
-           <h:inputSecret value="#{usuario.senha}" id="senha"/>
+           <h:inputSecret value="#{usuarioController.senha}" id="senha"/>
            <br/>
-           <h:commandButton id="button" value="Login" action="#{UsuarioController.logar}"/>
+           <h:commandButton id="button" value="Login" action="#{usuarioController.logar}"/>
            <br/>
 
            <h:messages />
